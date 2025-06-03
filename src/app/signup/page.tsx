@@ -6,7 +6,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import { auth } from "@/lib/firebase"; 
+// Update the import path if the file is located elsewhere, for example:
 import { Button } from "@/components/ui/button";
+// Or, if the file does not exist, create it at src/components/ui/button.tsx or .js
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
