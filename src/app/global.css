@@ -1,0 +1,206 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Palette HSL Definitions */
+    --oxford-blue-100: 217 80% 3%;    /* #01060e */
+    --oxford-blue-200: 216 82% 5%;    /* #010c1b */
+    --oxford-blue-300: 216 81% 8%;    /* #021129 */
+    --oxford-blue-400: 216 80% 11%;   /* #021737 */
+    --oxford-blue-500: 216 81% 14%;   /* #031d44 */
+    --oxford-blue-600: 216 91% 31%;   /* #064199 */
+    --oxford-blue-700: 216 93% 52%;   /* #0a65ed */
+    --oxford-blue-800: 216 92% 66%;   /* #5797f8 */
+    --oxford-blue-900: 216 92% 83%;   /* #abcbfb */
+
+    --prussian-blue-100: 207 88% 4%;  /* #010b13 */
+    --prussian-blue-200: 207 86% 8%;  /* #021625 */
+    --prussian-blue-300: 207 88% 11%; /* #022238 */
+    --prussian-blue-400: 207 89% 15%; /* #032d4a */
+    --prussian-blue-500: 206 90% 19%; /* #04395e */
+    --prussian-blue-600: 206 91% 35%; /* #0768ac */
+    --prussian-blue-700: 206 94% 52%; /* #1196f5 */
+    --prussian-blue-800: 206 92% 67%; /* #60b9f8 */
+    --prussian-blue-900: 206 92% 84%; /* #b0dcfc */
+
+    --cambridge-blue-100: 153 21% 11%; /* #16211b */
+    --cambridge-blue-200: 152 21% 22%; /* #2c4337 */
+    --cambridge-blue-300: 152 21% 32%; /* #416452 */
+    --cambridge-blue-400: 151 21% 43%; /* #57856d */
+    --cambridge-blue-500: 151 20% 54%; /* #70a288 */
+    --cambridge-blue-600: 151 20% 63%; /* #8db5a1 */
+    --cambridge-blue-700: 151 20% 73%; /* #aac7b8 */
+    --cambridge-blue-800: 151 20% 82%; /* #c8dad1 - This is the one being replaced for specific use */
+    --cambridge-blue-900: 151 21% 91%; /* #e3ece7 */
+
+    --tan-100: 35 50% 14%;  /* #362611 */
+    --tan-200: 35 51% 28%;  /* #6c4d21 */
+    --tan-300: 35 53% 41%;  /* #a27332 */
+    --tan-400: 35 54% 55%;  /* #c99750 */
+    --tan-500: 35 52% 70%;  /* #dab785 */
+    --tan-600: 35 51% 78%;  /* #e1c59e */
+    --tan-700: 35 52% 84%;  /* #e9d4b6 */
+    --tan-800: 35 52% 89%;  /* #f0e2cf */
+    --tan-900: 35 53% 94%;  /* #f8f1e7 */
+
+    --burnt-sienna-100: 16 56% 13%; /* #33180f */
+    --burnt-sienna-200: 15 56% 25%; /* #652f1d */
+    --burnt-sienna-300: 15 56% 38%; /* #98472c */
+    --burnt-sienna-400: 15 56% 51%; /* #c7603e */
+    --burnt-sienna-500: 15 55% 64%; /* #d5896f */
+    --burnt-sienna-600: 15 55% 72%; /* #dea18d */
+    --burnt-sienna-700: 15 55% 78%; /* #e6b9aa */
+    --burnt-sienna-800: 15 55% 86%; /* #eed0c6 */
+    --burnt-sienna-900: 15 56% 93%; /* #f7e8e3 */
+
+    --neutral-f2f2f2: 0 0% 95%;     /* #f2f2f2 */
+
+    /* Light Mode Semantic Mapping */
+    --background: var(--tan-900);               /* Light tan background: #f8f1e7 */
+    --foreground: var(--oxford-blue-400);      /* Dark blue for text: #021737 */
+
+    --card: 0 0% 100%;                          /* White cards: #ffffff */
+    --card-foreground: var(--oxford-blue-500); /* Dark blue card text: #031d44 */
+
+    --popover: 0 0% 100%;                       /* White popovers: #ffffff */
+    --popover-foreground: var(--oxford-blue-500); /* Dark blue popover text: #031d44 */
+
+    --primary: var(--prussian-blue-600);        /* Prussian blue primary: #0768ac */
+    --primary-foreground: 0 0% 100%;            /* White text on primary: #ffffff */
+
+    --secondary: var(--neutral-f2f2f2);         /* Very light gray secondary bg: #f2f2f2 */
+    --secondary-foreground: var(--oxford-blue-500); /* Dark blue secondary text: #031d44 */
+
+    --muted: var(--tan-800);                    /* Slightly darker tan muted bg: #f0e2cf */
+    --muted-foreground: var(--oxford-blue-300); /* Dark blue muted text: #021129 */
+
+    --accent: var(--burnt-sienna-500);          /* Burnt sienna accent: #d5896f */
+    --accent-foreground: 0 0% 100%;             /* White text on accent: #ffffff */
+
+    --destructive: var(--burnt-sienna-400);     /* Lighter burnt sienna destructive: #c7603e */
+    --destructive-foreground: 0 0% 100%;        /* White text on destructive: #ffffff */
+
+    --border: var(--tan-700);                   /* Tan for borders: #e9d4b6 */
+    --input: 0 0% 100%;                         /* White input backgrounds: #ffffff */
+    --ring: var(--prussian-blue-600);           /* Prussian blue for rings: #0768ac */
+
+    --radius: 0.5rem;
+
+    /* Chart Colors - Light Mode */
+    --chart-1: var(--prussian-blue-700);
+    --chart-2: var(--cambridge-blue-600);
+    --chart-3: var(--tan-500);
+    --chart-4: var(--burnt-sienna-500);
+    --chart-5: var(--oxford-blue-700);
+
+    /* Sidebar Colors - Light Mode */
+    --sidebar-background: var(--oxford-blue-100);
+    --sidebar-foreground: var(--tan-800);
+    --sidebar-primary: var(--cambridge-blue-600);
+    --sidebar-primary-foreground: var(--oxford-blue-100);
+    --sidebar-accent: var(--prussian-blue-300);
+    --sidebar-accent-foreground: var(--tan-700);
+    --sidebar-border: var(--oxford-blue-200);
+    --sidebar-ring: var(--cambridge-blue-600);
+  }
+
+  .dark {
+    /* Dark Mode Semantic Mapping - Keeping these as they provide good contrast with the palette */
+    --background: var(--oxford-blue-500);      /* Dark blue background: #031d44 */
+    --foreground: var(--tan-900);              /* Light tan text: #f8f1e7 */
+
+    --card: var(--prussian-blue-400);          /* Darker Prussian Blue cards: #032d4a */
+    --card-foreground: var(--tan-900);         /* Light tan card text: #f8f1e7 */
+
+    --popover: var(--oxford-blue-300);         /* Darker Oxford Blue popovers: #021129 */
+    --popover-foreground: var(--tan-900);      /* Light tan popover text: #f8f1e7 */
+
+    --primary: var(--cambridge-blue-600);      /* Cambridge Blue primary: #8db5a1 */
+    --primary-foreground: var(--oxford-blue-100); /* Very dark blue on primary: #01060e */
+
+    --secondary: var(--prussian-blue-300);     /* Lighter Prussian Blue secondary: #022238 */
+    --secondary-foreground: var(--tan-800);    /* Lighter tan secondary text: #f0e2cf */
+
+    --muted: var(--oxford-blue-400);           /* Oxford Blue muted bg: #021737 */
+    --muted-foreground: var(--tan-700);        /* Tan muted text: #e9d4b6 */
+
+    --accent: var(--tan-600);                  /* Tan accent: #e1c59e */
+    --accent-foreground: var(--oxford-blue-100); /* Very dark blue on accent: #01060e */
+
+    --destructive: var(--burnt-sienna-500);    /* Burnt Sienna destructive: #d5896f */
+    --destructive-foreground: var(--tan-900);  /* Light tan on destructive: #f8f1e7 */
+
+    --border: var(--prussian-blue-300);        /* Lighter Prussian Blue borders: #022238 */
+    --input: var(--oxford-blue-400);           /* Oxford Blue input bg: #021737 */
+    --ring: var(--cambridge-blue-600);         /* Cambridge Blue rings: #8db5a1 */
+    
+    /* Sidebar Colors - Dark Mode */
+    --sidebar-background: var(--oxford-blue-200);
+    --sidebar-foreground: var(--tan-800);
+    --sidebar-primary: var(--cambridge-blue-500);
+    --sidebar-primary-foreground: var(--oxford-blue-100);
+    --sidebar-accent: var(--prussian-blue-400);
+    --sidebar-accent-foreground: var(--tan-700);
+    --sidebar-border: var(--oxford-blue-100);
+    --sidebar-ring: var(--cambridge-blue-500);
+
+    /* Chart Colors - Dark Mode */
+    --chart-1: var(--prussian-blue-600);
+    --chart-2: var(--cambridge-blue-500);
+    --chart-3: var(--tan-600);
+    --chart-4: var(--burnt-sienna-600);
+    --chart-5: var(--oxford-blue-600);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom style for calendar day event indicator */
+@layer components {
+  .day-has-event {
+    @apply relative;
+  }
+  .day-has-event::after {
+    content: '';
+    @apply block w-1.5 h-1.5 bg-primary rounded-full absolute bottom-1.5 left-1/2 -translate-x-1/2;
+  }
+  .rdp-day_selected.day-has-event::after {
+     @apply bg-primary-foreground;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.landing-page-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-prussian_blue-600 via-cambridge_blue-500 to-burnt_sienna-500;
+}
+.dark .landing-page-gradient-text {
+  @apply bg-gradient-to-r from-prussian_blue-700 via-cambridge_blue-600 to-burnt_sienna-600;
+}
